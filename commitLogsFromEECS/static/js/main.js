@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	var row = $('<div class="row commit"><div class="small-2 large-2 columns avatar"><img width="75px"></div><div class="small-3 large-3 columns timestamp"><p></p></div><div class="small-7 large-7 columns message"><p></p></div></div>');
+	var row = $('<div class="row commit"><div class="small-2 large-2 columns avatar"><img width="75px"></div><div class="small-3 large-3 columns timestamp"><p></p></div><div class="small-7 large-7 columns message"><p></p></div></div>'),
+		rowType = 0;
 	$('.commits').infinitescroll({
 		navSelector: 'div.pagination',
 		nextSelector: 'div.pagination a:first',
@@ -25,6 +26,8 @@ $(document).ready(function() {
 		for (var i = 0; i < data.length; i++) {
 			var newRow = row.clone(),
 				timestamp = moment(data[i].timestamp);
+			$(newRow).addClass('type-' + rowType);
+			rowType = (rowType + 1) % 2;
 			$('img', newRow).attr('src', data[i].avatar);
 			$('.timestamp p', newRow).text(timestamp.format('MM/DD/YY, h:mm:ss A'));
 			$('.message p', newRow).text(data[i].message);

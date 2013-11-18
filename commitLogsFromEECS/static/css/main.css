@@ -1,7 +1,7 @@
 .commit {
 	padding: 10px;
 }
-.commit:nth-of-type(even) {
+.type-1 {
 	background-color: #EEE;
 }
 .timestamp {
