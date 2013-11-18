@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	var lastPage = 0,
-		row = $('<div class="row commit"><div class="small-2 large-2 columns avatar"><img width="75px"></div><div class="small-3 large-3 columns timestamp"><p></p></div><div class="small-7 large-7 columns message"><p></p></div></div>');
+	var row = $('<div class="row commit"><div class="small-2 large-2 columns avatar"><img width="75px"></div><div class="small-3 large-3 columns timestamp"><p></p></div><div class="small-7 large-7 columns message"><p></p></div></div>');
 	$('.commits').infinitescroll({
 		navSelector: 'div.pagination',
 		nextSelector: 'div.pagination a:first',
@@ -19,7 +18,6 @@ $(document).ready(function() {
 			return '/commits/jsonPageAfter/?page=' + page;
 		}
 	}, function(data, opts) {
-		console.log(data);
 		if (data.length === 0) {
 			opts.state.isDone = true;
 		}
