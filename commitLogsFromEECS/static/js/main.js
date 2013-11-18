@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('.commits').infinitescroll({
 		navSelector: 'div.pagination',
 		nextSelector: 'div.pagination a:first',
-		itemSelector: '.commits div.commit',
+		//itemSelector: '.commits div.commit',
 		loading: {
 			msg: $('<div></div>')
 		},
