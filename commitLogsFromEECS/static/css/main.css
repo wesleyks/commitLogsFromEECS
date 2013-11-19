@@ -16,10 +16,14 @@
 .top-bar {
 	background-color: #571963;
 	text-align: center;
-	height: 80px;
+	height: 90px;
 }
-.top-bar h1 {
+.title {
 	color: #FFF;
+}
+.top-bar-section li {
+	text-align: center;
+	list-style: none;
 }
 .waypoint {
 	height: 10px;
