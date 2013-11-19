@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var row = $('<div class="row commit"><div class="small-4 large-2 columns avatar"><img width="75px"></div><div class="small-8 large-3 columns timestamp"><p></p></div><div class="small-8 large-7 columns message"><p></p></div></div>'),
+	var row = $('<div class="row commit"><div class="small-4 large-2 columns avatar"><img width="75px"></div><div class="small-8 large-3 columns timestamp"><p></p></div><div class="small-12 large-7 columns message"><p></p></div></div>'),
 		rowType = 0;
 	$('.commits').infinitescroll({
 		navSelector: 'div.pagination',
