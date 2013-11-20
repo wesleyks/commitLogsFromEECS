@@ -18,7 +18,7 @@ $(document).ready(function() {
 		dataType: 'json',
 		appendCallback: false,
 		prefill: true,
-		bufferPx: 100,
+		bufferPx: 1500,
 		path: function(page) {
 			return '/commits/jsonPageAfter/?page=' + page;
 		}
