@@ -8,6 +8,6 @@ class Professor(models.Model):
 	avatar_thumbnail = ProcessedImageField(upload_to='avatars/',
 		processors=[ResizeToFill(100, 100)],
 		format='JPEG',
-		options={'quality': 60})
+		options={'quality': 80})
 	def __unicode__(self):
 		return self.name
